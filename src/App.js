@@ -6,7 +6,7 @@ const App = () => {
     return (
         <Router>
             <Navbar />
-            <AdminProfile />
+            {/* <AdminProfile /> */}
             <Routes>
                 
             </Routes>
