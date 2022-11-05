@@ -1,24 +1,21 @@
 import React, { useState } from "react";
+import {image} from '../../Constants/constants'
+import {user} from '../../Constants/constants'
 import { Link } from "react-router-dom";
-import TopPopup from "../pop-ups/TopPopup";
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import LogoutIcon from "@mui/icons-material/Logout";
-import CheckCircleOutlineSharpIcon from "@mui/icons-material/CheckCircleOutlineSharp";
-import CloseSharpIcon from "@mui/icons-material/CloseSharp";
+import WbSunnySharpIcon from '@mui/icons-material/WbSunnySharp';
+import NightlightSharpIcon from '@mui/icons-material/NightlightSharp';
 const Navbar = () => {
-  document.addEventListener("keyup", changeScreen);
-  function changeScreen(e) {
+  document.addEventListener("keyup", goFullScreen);
+  function goFullScreen(e) {
     var keyCode = e.keyCode;
     return keyCode === 70 ? toggleFullScreen() : "";
   }
-  const [user, setUser] = useState("Vineet");
-  let [image, setImage] = useState(
-    "https://www.tripadapublicschool.in/public/uploads/alumni/1576069050.jpg"
-  );
   const [msgCount, setMsgCount] = useState(5);
   let [isShow, setIsShow] = useState(false);
   function toggleFullScreen() {
@@ -82,24 +79,30 @@ const Navbar = () => {
             <h2>{user}</h2>
           </div>
           <div className="icons toggle">
-            <span className="icon" onClick={() => setIsShow = !isShow}>
+            <span className="icon" onClick={(e) => 
+            {
+              setIsShow(!isShow)
+              e.currentTarget.classList.toggle('rotate-180');
+            }
+
+            }>
               {<KeyboardArrowDownIcon />}
             </span>
           </div>
-          {
-            isShow && <div className="controller-menu">
-            <ul className="list-1">
-              <li>
-                <Link to="/editProfile">Edit Profile</Link>
-              </li>
-              <li>
-                <Link to="/logOut">
-                  Logout <span className="icon">{<LogoutIcon />}</span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          }
+          {isShow && (
+            <div className="controller-menu">
+              <ul className="list-1">
+                <li>
+                  <Link to="/editProfile">Edit Profile</Link>
+                </li>
+                <li>
+                  <Link to="/logOut">
+                    Logout <span className="icon">{<LogoutIcon />}</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </nav>
     </>

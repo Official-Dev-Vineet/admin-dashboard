@@ -19,7 +19,3 @@
     align-items: center;
     justify-content: space-between;
 }
-::selection{
-    background-color: var(--dark);
-    color: var(--info);
-}

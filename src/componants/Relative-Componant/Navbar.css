@@ -75,6 +75,7 @@ nav .right .user-profile picture img {
 nav .right .user-profile h2 {
   font-weight: 400;
   font-size: 1.2rem;
+  text-transform: capitalize;
 }
 
 /* controller */
@@ -88,6 +89,16 @@ nav .controller-menu {
   top: 100%;
   padding:0 1em;
   box-shadow: 0 3px 30px rgba(0, 0, 0, 0.4);
+  animation: opacity 0.5s forwards linear ease-in;
+}
+@keyframes opacity {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+  
 }
 nav .controller-menu li{
   list-style: none;
