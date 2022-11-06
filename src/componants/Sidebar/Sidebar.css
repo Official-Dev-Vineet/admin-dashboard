@@ -1,11 +1,18 @@
 aside{
     position: fixed;
     top: 40px;
-    height: 80vh;
+    height: 90vh;
     width: 14rem;
     background-color: #fff;
     box-shadow: 0 0 60px var(--light-shadow);
     border-radius: 0 0 1em 0;
+    white-space: nowrap;
+}
+aside.active{
+    background-color: red;
+}
+aside.notActive{
+    background-color: green;
 }
 aside .top{
     width: 100%;
@@ -46,7 +53,7 @@ aside .top h2{
     position: relative;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--light-gray);
 }
 .middle .input-field label{
     width: 15%;
@@ -61,4 +68,59 @@ aside .top h2{
     background-color: transparent;
     outline: none;
     border: none;
+    color: var(--dark-gray);
+}
+.middle .input-field input:focus{
+    color: var(--dark-gray);
+}
+.middle .menu-links {
+    margin-top: 0.5em;
+}
+.middle .menu-links ul{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.middle .menu-links ul li{
+    margin-block: 0.4em;
+    list-style: none;
+    position: relative;
+}
+.middle .menu-links ul li:hover{
+    transform: translateX(20px);
+}
+.middle .menu-links ul li::before{
+    content: '';
+    width: 0.2em;
+    height: 100%;
+    position: absolute;
+    background-color: var(--primary);
+}
+.middle .menu-links ul li a , .last a{ 
+    font-size: 0.7em;
+    margin-left: 0.6em;
+    text-decoration: none;
+    color: var(--dark-gray);
+    display: flex;
+    align-items: center;
+}
+.middle .menu-links ul li a .icon{
+    margin-right: 0.4em;
+}
+.middle .menu-links ul li a .icon svg{
+    font-size: 1.2em;
+}
+.last{
+    height: auto;
+    display: flex;
+    align-items: center;
+
+}
+.last .icon{
+    margin-left: 0.5em;
+}
+.last .icon svg{
+    font-size: 0.8em;
+    color: var(--danger);
 }

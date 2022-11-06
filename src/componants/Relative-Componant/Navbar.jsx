@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import {image} from '../../Constants/constants'
-import {user} from '../../Constants/constants'
+import { image } from "../../Constants/constants";
+import { user } from "../../Constants/constants";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -8,9 +8,10 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import LogoutIcon from "@mui/icons-material/Logout";
-import WbSunnySharpIcon from '@mui/icons-material/WbSunnySharp';
-import NightlightSharpIcon from '@mui/icons-material/NightlightSharp';
+import WbSunnySharpIcon from "@mui/icons-material/WbSunnySharp";
+import NightlightSharpIcon from "@mui/icons-material/NightlightSharp";
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(true);
   document.addEventListener("keyup", goFullScreen);
   function goFullScreen(e) {
     var keyCode = e.keyCode;
@@ -53,7 +54,14 @@ const Navbar = () => {
             <h1>Admin Dashboard</h1>
           </div>
           <div className="icons">
-            <span className="icon" title="menu">
+            <span
+              className="icon"
+              title="menu"
+              onClick={() => {
+                setIsOpen(!isOpen)
+                localStorage.setItem("menuBar", isOpen );
+              }}
+            >
               {<MenuIcon />}
             </span>
             <span
@@ -67,7 +75,7 @@ const Navbar = () => {
         </div>
         <div className="right">
           <div className="icons">
-            <span className="icon" title={`${msgCount} notification`}>
+            <span className="icon" title={`${msgCount} notification`} onClick={()=>setMsgCount(0)}>
               {<NotificationsNoneIcon />}
               <span className="msg-count">{msgCount}</span>
             </span>
@@ -79,13 +87,13 @@ const Navbar = () => {
             <h2>{user}</h2>
           </div>
           <div className="icons toggle">
-            <span className="icon" onClick={(e) => 
-            {
-              setIsShow(!isShow)
-              e.currentTarget.classList.toggle('rotate-180');
-            }
-
-            }>
+            <span
+              className="icon"
+              onClick={(e) => {
+                setIsShow(!isShow);
+                e.currentTarget.classList.toggle("rotate-180");
+              }}
+            >
               {<KeyboardArrowDownIcon />}
             </span>
           </div>
