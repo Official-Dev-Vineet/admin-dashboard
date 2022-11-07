@@ -1,18 +1,22 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Dashboard from './componants/DashBoard/Dashboard'
 // import AdminProfile from './componants/AdminPannel/AdminProfile' 
 import Navbar from './componants/Relative-Componant/Navbar'
 import SideBar from './componants/Sidebar/SideBar'
 const App = () => {
     return (
-        <Router>
-            <Navbar />
-            <SideBar />
-            {/* <AdminProfile /> */}
-            <Routes>
-                
-            </Routes>
-        </Router>
+        <BrowserRouter>
+            <div className='container'>
+                <Navbar />
+                <SideBar />
+                <Dashboard />
+                <Routes>
+                    <Route path='/Dashboard' element={<Dashboard />} />
+                </Routes>
+            </div>
+
+        </BrowserRouter>
     )
 }
 
