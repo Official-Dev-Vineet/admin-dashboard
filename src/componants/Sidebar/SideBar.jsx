@@ -13,12 +13,10 @@ import ReportGmailerrorredSharpIcon from "@mui/icons-material/ReportGmailerrorre
 import SettingsSharpIcon from "@mui/icons-material/SettingsSharp";
 import AddSharpIcon from "@mui/icons-material/AddSharp";
 import LogoutSharpIcon from "@mui/icons-material/LogoutSharp";
-
+import { msg } from "../../Constants/constants";
 const SideBar = () => {
- 
-   let activeValue=localStorage.getItem('menuBar');
   return (
-    <aside className={ activeValue === "true" ? 'active':'notActive'}>
+    <aside className="">
       <div className="top">
         <picture>
           <img src={image} alt="user" />
@@ -34,8 +32,8 @@ const SideBar = () => {
         </div>
         <div className="menu-links">
           <ul>
-            <li >
-              <Link to="/Dashboard">
+            <li>
+              <Link to="dashboard">
                 <span className="icon">{<DashboardSharpIcon />}</span>Dashboard
               </Link>
             </li>
@@ -55,10 +53,10 @@ const SideBar = () => {
                 <span className="icon">{<InsightsSharpIcon />}</span>Analytics
               </Link>
             </li>
-            <li>
+            <li title={`you've ${msg} messages`}>
               <Link to="/Messages">
                 <span className="icon">{<MailOutlineSharpIcon />}</span>Messages{" "}
-                <span className="msg">26</span>
+                <span className="msg">{msg}</span>
               </Link>
             </li>
             <li>
