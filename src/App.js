@@ -7,9 +7,10 @@ import SideBar from './componants/Sidebar/SideBar'
 const App = () => {
     return (
         <BrowserRouter>
+            <Navbar />
+            <SideBar />
             <div className='container'>
-                <Navbar />
-                <SideBar />
+
                 <Dashboard />
                 <Routes>
                     <Route path='/Dashboard' element={<Dashboard />} />

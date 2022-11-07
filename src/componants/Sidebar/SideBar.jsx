@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { image, user } from "../../Constants/constants";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";

@@ -1,9 +1,18 @@
 .header{
-    display: flex;
     width: calc(100% - 14rem);
-    height: 200px;
+    height: 100px;
     position: absolute;
     top: 40px;
     left: 14rem;
-    background-color: red;
+    padding: 1rem 2rem;
+    background-color: hsl(217, 47%, 40%);
+    color: var(--light);
+}
+.header h2{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.header p{
+    font-size: 0.8em;
+    opacity: 0.8;
 }
