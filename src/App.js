@@ -10,10 +10,9 @@ const App = () => {
             <Navbar />
             <SideBar />
             <div className='container'>
-
-                <Dashboard />
                 <Routes>
-                    <Route path='/Dashboard' element={<Dashboard />} />
+                    <Route index path='/' element={<Dashboard />} />
+                    <Route path='/dashboard' element={<Dashboard />} />
                 </Routes>
             </div>
 
