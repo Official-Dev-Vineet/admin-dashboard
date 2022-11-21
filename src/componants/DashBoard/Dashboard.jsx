@@ -1,5 +1,5 @@
 import MainHeader from "../pop-ups/MainHeader";
-import React from "react";
+import News from "../Relative-Componant/News";
 import PersonOutlineSharpIcon from "@mui/icons-material/PersonOutlineSharp";
 import VolumeUpSharpIcon from "@mui/icons-material/VolumeUpSharp";
 import DescriptionSharpIcon from "@mui/icons-material/DescriptionSharp";
@@ -9,6 +9,8 @@ import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact
 import SignalCellularAltSharpIcon from "@mui/icons-material/SignalCellularAltSharp";
 import WifiSharpIcon from "@mui/icons-material/WifiSharp";
 import StarIcon from "@mui/icons-material/StarSharp";
+import { FetchAPI, FetchImage } from "../../Constants/FetchData";
+import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import {
   visitors,
@@ -22,7 +24,10 @@ import {
   ratings,
   achievement,
 } from "../../Constants/constants";
+import { useState } from "react";
+import Member from "../Relative-Componant/Member";
 const Dashboard = () => {
+  const [toggler, setToggler] = useState(false)
   return (
     <div className="dashboard">
       <MainHeader title="Dashboard">Welcome Back to your dashboard </MainHeader>
@@ -92,27 +97,35 @@ const Dashboard = () => {
             <div className="box">
               <span className="icon">{<StarIcon />}</span>
               <div className="data-details">
-                <h4>
-                  {ratings}+
-                </h4>
-                <small>
-                  ratings received
-                </small>
+                <h4>{ratings}+</h4>
+                <small>ratings received</small>
               </div>
             </div>
             <div className="box">
               <span className="icon">{<EmojiEventsIcon />}</span>
               <div className="data-details">
-                <h4>
-                  {achievement}
-                </h4>
-                <small>
-                  achievement
-                </small>
+                <h4>{achievement}</h4>
+                <small>achievement</small>
               </div>
             </div>
           </div>
+
+          <div className="news-toggler">
+            <h2 onClick={() => setToggler((pre) => !pre)}>
+              {toggler ? "hide news" : "show news"}
+            </h2>
+            <div className="news-list">
+              {
+                toggler? <News /> : 'hidden successfully '
+              }
+            </div>
+          </div>
+
         </section>
+        <section className="member">
+          <Member />
+        </section>
+
       </main>
     </div>
   );

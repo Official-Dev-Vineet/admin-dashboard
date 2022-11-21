@@ -20,3 +20,64 @@ export const connections = 100 //connection stability
 export const ratings = 4000 // rating in a month 
 export const achievement = 17
 
+
+// member performance 
+
+export const members = [
+    {
+        id: Math.floor(Math.random() * 9999),
+        name: 'Skew',
+        age: 23,
+        post: 'sales executive',
+        country: 'en',  
+        contribution: Math.floor(Math.random() * 99).toFixed(2)
+    },
+    {
+        id: Math.floor(Math.random() * 9999),
+        name: 'Robert',
+        age: 23,
+        post: 'sales executive',
+        country: 'jp',
+        contribution: Math.floor(Math.random() * 99).toFixed(2)
+    },
+    {
+        id: Math.floor(Math.random() * 9999),
+        name: 'jonathan',
+        age: 23,
+        post: 'sales executive',
+        country: 'cn',
+        contribution: Math.floor(Math.random() * 99).toFixed(2)
+    },
+    {
+        id: Math.floor(Math.random() * 9999),
+        name: 'Saliva',
+        age: 23,
+        post: 'sales executive',
+        country: 'en',
+        contribution: Math.floor(Math.random() * 99).toFixed(2)
+    },
+    {
+        id: Math.floor(Math.random() * 9999),
+        name: 'Newton',
+        age: 23,
+        post: 'Hr',
+        country: 'usa',
+        contribution: Math.floor(Math.random() * 99).toFixed(2)
+    },
+    {
+        id: Math.floor(Math.random() * 9999),
+        name: 'Fredrick',
+        age: 23,
+        post: 'digital marketing',
+        country: 'au',
+        contribution: Math.floor(Math.random() * 99).toFixed(2)
+    },
+    {
+        id: Math.floor(Math.random() * 9999),
+        name: 'Elli',
+        age: 25,
+        post: 'Graphics designer',
+        country: 'np',
+        contribution: Math.floor(Math.random() * 99).toFixed(2)
+    }
+]

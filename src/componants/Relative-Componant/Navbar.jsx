@@ -12,11 +12,11 @@ import WbSunnySharpIcon from "@mui/icons-material/WbSunnySharp";
 import NightlightSharpIcon from "@mui/icons-material/NightlightSharp";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(true);
-  document.addEventListener("keyup", goFullScreen);
-  function goFullScreen(e) {
-    var keyCode = e.keyCode;
-    return keyCode === 70 ? toggleFullScreen() : "";
-  }
+  // document.addEventListener("keyup", goFullScreen)
+  // function goFullScreen(e) {
+  //   var keyCode = e.keyCode;
+  //   return keyCode === 70 ? toggleFullScreen() : "";
+  // }
   const [msgCount, setMsgCount] = useState(5);
   let [isShow, setIsShow] = useState(false);
   function toggleFullScreen() {

@@ -83,6 +83,7 @@ nav .right .user-profile h2 {
 nav .controller-menu {
   display: block;
   position:absolute;
+  z-index: 2;
   right: 1em;
   background-color:var(--light);
   border-radius:0 0 1em 1em;
