@@ -4,14 +4,10 @@
   margin: 0;
   box-sizing: border-box;
   transition: all 300ms ease;
+  transform-origin: center;
   border: none;
   outline: none;
   backface-visibility: hidden;
-}
-*:focus {
-  outline: 2px dotted var(--info);
-  border-radius: 2rem;
-  background-color: var(--light-gray);
 }
 :root {
   --bg-light: #eff5f7;

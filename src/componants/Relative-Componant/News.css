@@ -2,13 +2,14 @@
     position: absolute;
     right: 0.5em;
     top: calc(40px + 100px + 20px);
-    height: 400px;
+    height: 350px;
     width: 300px;
    background-color: var(--dark);
    color: var(--light);
     overflow: scroll;
     box-shadow:0 0 30px rgba(0,0,0,0.4) ;
     border-radius: 0.5em;
+    animation: opacity 300ms forwards;
 }
 .news::-webkit-scrollbar{
     width: 0;
@@ -23,12 +24,13 @@
     place-items: center;
     height: 1.6em;
     z-index: 1;
+    border-bottom: 1px solid var(--light);
 }
 .news .input-box input{
     height: 100%;
     width: 100%;
     padding-left: 0.3em;
-    background-color: var(--dark-primary);
+    background-color: transparent;
     color: var(--light);
 }
 .news .input-box button{

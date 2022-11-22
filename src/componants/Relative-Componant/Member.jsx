@@ -1,15 +1,9 @@
 import React, { useState } from "react";
 import { members } from "../../Constants/constants";
 import BuildIcon from "@mui/icons-material/Build";
-import './member.css'
-import { FetchImage } from "../../Constants/FetchData";
-
+import "./member.css";
+import { images } from "../../Constants/constants";
 const Member = () => {
-  const [image,setImage]=useState(null);
-  FetchImage('user').then((data)=>{
-    setImage(data)
-   console.log(data)
-  })
   return (
     <div className="table">
       <div className="table-header">
@@ -29,14 +23,14 @@ const Member = () => {
           {members.map((data, index) => {
             return (
               <tr className="table-data" key={index}>
-                <td>{data.id}</td>
+                <td>{data?.id}</td>
                 <td>
-                  <img src={null} alt="user" height={40} width={40} />
+                  <img src={images[index]} alt="user" height={60} width={60} />
                 </td>
                 <td>
-                  <h5>{data.name}</h5>
+                  <h5>{data?.name}</h5>
                   <p>
-                    {data.post}, {data.country}
+                    {data?.post}, {data?.country}
                   </p>
                 </td>
                 <td>${data.contribution}</td>

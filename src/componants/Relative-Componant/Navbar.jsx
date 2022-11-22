@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { image } from "../../Constants/constants";
 import { user } from "../../Constants/constants";
 import { Link } from "react-router-dom";
@@ -10,15 +10,16 @@ import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import LogoutIcon from "@mui/icons-material/Logout";
 import WbSunnySharpIcon from "@mui/icons-material/WbSunnySharp";
 import NightlightSharpIcon from "@mui/icons-material/NightlightSharp";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(true);
-  // document.addEventListener("keyup", goFullScreen)
-  // function goFullScreen(e) {
-  //   var keyCode = e.keyCode;
-  //   return keyCode === 70 ? toggleFullScreen() : "";
-  // }
+  function themeHandler() {
+    document.querySelector('body').style.backgroundColor='#000'
+    setToggle((pre) => !pre);
+  }
   const [msgCount, setMsgCount] = useState(5);
   let [isShow, setIsShow] = useState(false);
+  const [toggle, setToggle] = useState(true);
   function toggleFullScreen() {
     if (
       (document.fullScreenElement && document.fullScreenElement !== null) ||
@@ -43,6 +44,17 @@ const Navbar = () => {
       }
     }
   }
+
+  useEffect(() => {
+    let menubar = document.getElementById("menuBar");
+    menubar.onclick = () => changeSidebar();
+    function changeSidebar() {
+      document.getElementsByTagName("aside")[0].classList.toggle("active");
+      document
+        .getElementsByClassName("dashboard")[0]
+        .classList.toggle("active");
+    }
+  }, []);
   return (
     <>
       <nav>
@@ -54,14 +66,7 @@ const Navbar = () => {
             <h1>Admin Dashboard</h1>
           </div>
           <div className="icons">
-            <span
-              className="icon"
-              title="menu"
-              onClick={() => {
-                setIsOpen(!isOpen)
-                localStorage.setItem("menuBar", isOpen );
-              }}
-            >
+            <span className="icon" title="menu" id="menuBar">
               {<MenuIcon />}
             </span>
             <span
@@ -75,7 +80,20 @@ const Navbar = () => {
         </div>
         <div className="right">
           <div className="icons">
-            <span className="icon" title={`${msgCount} notification`} onClick={()=>setMsgCount(0)}>
+            {toggle ? (
+              <span className="icon" onClick={() => themeHandler()}>
+                {<WbSunnySharpIcon />}
+              </span>
+            ) : (
+              <span className="icon" onClick={() => themeHandler()}>
+                {<NightlightSharpIcon />}
+              </span>
+            )}
+            <span
+              className="icon"
+              title={`${msgCount} notification`}
+              onClick={() => setMsgCount(0)}
+            >
               {<NotificationsNoneIcon />}
               <span className="msg-count">{msgCount}</span>
             </span>
