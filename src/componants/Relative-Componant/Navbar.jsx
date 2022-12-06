@@ -8,18 +8,10 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import LogoutIcon from "@mui/icons-material/Logout";
-import WbSunnySharpIcon from "@mui/icons-material/WbSunnySharp";
-import NightlightSharpIcon from "@mui/icons-material/NightlightSharp";
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(true);
-  function themeHandler() {
-    document.querySelector('body').style.backgroundColor='#000'
-    setToggle((pre) => !pre);
-  }
   const [msgCount, setMsgCount] = useState(5);
   let [isShow, setIsShow] = useState(false);
-  const [toggle, setToggle] = useState(true);
   function toggleFullScreen() {
     if (
       (document.fullScreenElement && document.fullScreenElement !== null) ||
@@ -44,7 +36,6 @@ const Navbar = () => {
       }
     }
   }
-
   useEffect(() => {
     let menubar = document.getElementById("menuBar");
     menubar.onclick = () => changeSidebar();
@@ -80,15 +71,6 @@ const Navbar = () => {
         </div>
         <div className="right">
           <div className="icons">
-            {toggle ? (
-              <span className="icon" onClick={() => themeHandler()}>
-                {<WbSunnySharpIcon />}
-              </span>
-            ) : (
-              <span className="icon" onClick={() => themeHandler()}>
-                {<NightlightSharpIcon />}
-              </span>
-            )}
             <span
               className="icon"
               title={`${msgCount} notification`}
@@ -134,5 +116,4 @@ const Navbar = () => {
     </>
   );
 };
-
 export default Navbar;

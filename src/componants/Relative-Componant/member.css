@@ -1,5 +1,5 @@
 .table {
-  width: 50%;
+  width: 500px;
   display: inline-block;
   margin-block: 2em;
   border-radius: 1em;
@@ -66,6 +66,12 @@ table tbody tr td {
 }
 table tbody tr td img {
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+table tbody tr td:has(img){
+  padding: 0.3em;
 }
 table tbody tr.table-data {
   font-size: 15px;

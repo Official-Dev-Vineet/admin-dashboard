@@ -34,50 +34,57 @@ const SideBar = () => {
           <ul>
             <li>
               <Link to="dashboard">
-                <span className="icon">{<DashboardSharpIcon />}</span>Dashboard
+                <span className="icon">{<DashboardSharpIcon />}</span>
+                <span className="link">Dashboard</span>
               </Link>
             </li>
             <li>
               <Link to="/Customers">
                 <span className="icon">{<PermIdentitySharpIcon />}</span>{" "}
-                Customers
+                <span className="link">Customers</span>
               </Link>
             </li>
             <li>
               <Link to="/Orders">
-                <span className="icon">{<ReceiptLongSharpIcon />}</span>Orders
+                <span className="icon">{<ReceiptLongSharpIcon />}</span>
+                <span className="link">Orders</span>
               </Link>
             </li>
             <li>
               <Link to="/Analytics">
-                <span className="icon">{<InsightsSharpIcon />}</span>Analytics
+                <span className="icon">{<InsightsSharpIcon />}</span>
+                <span className="link">Analytics</span>
               </Link>
             </li>
             <li title={`you've ${msg} messages`}>
               <Link to="/Messages">
-                <span className="icon">{<MailOutlineSharpIcon />}</span>Messages{" "}
+                <span className="icon">{<MailOutlineSharpIcon />}</span>
+                <span className="link">Messages</span>{" "}
                 <span className="msg">{msg}</span>
               </Link>
             </li>
             <li>
               <Link to="/Products">
-                <span className="icon">{<InventorySharpIcon />}</span>Products
+                <span className="icon">{<InventorySharpIcon />}</span>
+                <span className="link">Products</span>
               </Link>
             </li>
             <li>
               <Link to="/Reports">
                 <span className="icon">{<ReportGmailerrorredSharpIcon />}</span>
-                Reports
+                <span className="link">Reports</span>
               </Link>
             </li>
             <li>
               <Link to="/Settings">
-                <span className="icon">{<SettingsSharpIcon />}</span>Settings
+                <span className="icon">{<SettingsSharpIcon />}</span>
+                <span className="link">Settings</span>
               </Link>
             </li>
             <li>
               <Link to="/Add-account">
-                <span className="icon">{<AddSharpIcon />}</span>Add Account
+                <span className="icon">{<AddSharpIcon />}</span>
+                <span className="link">Add Account</span>
               </Link>
             </li>
           </ul>
@@ -86,7 +93,7 @@ const SideBar = () => {
       <div className="last">
         <div className="logout">
           <Link to="/Logout">
-            Logout
+            <span className="link">Logout</span>
             <span className="icon">{<LogoutSharpIcon />}</span>
           </Link>
         </div>

@@ -6,7 +6,7 @@
     width: 300px;
    background-color: var(--dark);
    color: var(--light);
-    overflow: scroll;
+    overflow-y: scroll;
     box-shadow:0 0 30px rgba(0,0,0,0.4) ;
     border-radius: 0.5em;
     animation: opacity 300ms forwards;
@@ -24,6 +24,7 @@
     place-items: center;
     height: 1.6em;
     z-index: 1;
+    background-color: var(--dark);
     border-bottom: 1px solid var(--light);
 }
 .news .input-box input{

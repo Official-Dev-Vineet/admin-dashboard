@@ -69,3 +69,7 @@ html {
 .success {
   color: var(--success);
 }
+a.active{
+  color:red;
+  font-size: 3rem;
+}

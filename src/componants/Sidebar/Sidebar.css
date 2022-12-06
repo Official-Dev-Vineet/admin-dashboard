@@ -53,6 +53,9 @@ aside .top h2{
 aside.active .top h2{
     display: none;
 }
+aside.active .link{
+    display: none;
+}
 .middle{
     height: calc(80vh - 100px);
     padding: 0.4em;
@@ -95,6 +98,9 @@ aside.active .middle .input-field{
     flex-direction: column;
     overflow-x: hidden;
 }
+aside.active .middle .menu-links ul{
+    align-items: center;
+}
 .middle .menu-links ul li{
     list-style: none;
     position: relative;
@@ -112,7 +118,7 @@ aside.active .middle .input-field{
     border-radius: 2em 0 0 2em;
 }
 aside.active .middle .menu-links ul li:hover{
-transform: translateY(-0.3em);
+transform:none;
 }
 .middle .menu-links ul li a , .last a{ 
     font-size: 0.7em;
@@ -128,6 +134,9 @@ transform: translateY(-0.3em);
 .middle .menu-links ul li a .icon svg{
     font-size: 1.2em;
 }
+aside.active .icon svg {
+    font-size: 1.5em !important;
+}
 .middle .menu-links ul li a .msg{
     color: var(--info);
     margin-left: 1em;
@@ -135,6 +144,9 @@ transform: translateY(-0.3em);
     font-size: 0.8em;
     background-color: var(--light-gray);
     border-radius: var(--radius-10);
+}
+aside.active ul li a .msg{
+    display: none;
 }
 .middle .menu-links ul li:hover a{
     color: var(--primary);

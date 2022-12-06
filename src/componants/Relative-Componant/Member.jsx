@@ -25,7 +25,7 @@ const Member = () => {
               <tr className="table-data" key={index}>
                 <td>{data?.id}</td>
                 <td>
-                  <img src={images[index]} alt="user" height={60} width={60} />
+                  <img src={images[index]} alt="user" />
                 </td>
                 <td>
                   <h5>{data?.name}</h5>
