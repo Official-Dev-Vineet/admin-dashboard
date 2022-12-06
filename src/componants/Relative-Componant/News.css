@@ -3,7 +3,7 @@
     right: 0.5em;
     top: calc(40px + 100px + 20px);
     height: 350px;
-    width: 300px;
+    width: calc(100% - 700px);
    background-color: var(--dark);
    color: var(--light);
     overflow-y: scroll;

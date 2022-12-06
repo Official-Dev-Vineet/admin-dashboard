@@ -29,7 +29,7 @@ const Member = () => {
                 </td>
                 <td>
                   <h5>{data?.name}</h5>
-                  <p>
+                  <p className="data">
                     {data?.post}, {data?.country}
                   </p>
                 </td>

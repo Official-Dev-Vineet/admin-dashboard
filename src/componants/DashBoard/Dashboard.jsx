@@ -1,4 +1,5 @@
 import MainHeader from "../pop-ups/MainHeader";
+import MonthlyChanges from "../Relative-Componant/MonthlyChanges";
 import News from "../Relative-Componant/News";
 import PersonOutlineSharpIcon from "@mui/icons-material/PersonOutlineSharp";
 import VolumeUpSharpIcon from "@mui/icons-material/VolumeUpSharp";
@@ -27,7 +28,7 @@ import {
 import { useState } from "react";
 import Member from "../Relative-Componant/Member";
 const Dashboard = () => {
-  const [toggler, setToggler] = useState(false)
+  const [toggler, setToggler] = useState(false);
   return (
     <div className="dashboard">
       <MainHeader title="Dashboard">Welcome Back to your dashboard </MainHeader>
@@ -115,17 +116,14 @@ const Dashboard = () => {
               {toggler ? "hide news" : "show news"}
             </h2>
             <div className="news-list">
-              {
-                toggler? <News /> : 'hidden successfully '
-              }
+              {toggler ? <News /> : "hidden successfully "}
             </div>
           </div>
-
         </section>
         <section className="member">
           <Member />
+          <MonthlyChanges />
         </section>
-
       </main>
     </div>
   );

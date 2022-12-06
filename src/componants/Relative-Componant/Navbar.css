@@ -18,7 +18,10 @@ nav .right {
 }
 nav .left .logo h1 {
   font-weight: 500;
-  color: var(--light);
+  color: transparent;
+  background-image: linear-gradient(to right, var(--dark), var(--danger));
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 nav .left .title h1 {
   font-weight: 500;
@@ -82,39 +85,37 @@ nav .right .user-profile h2 {
 
 nav .controller-menu {
   display: block;
-  position:absolute;
+  position: absolute;
   z-index: 2;
   right: 1em;
-  background-color:var(--light);
-  border-radius:0 0 1em 1em;
+  background-color: var(--light);
+  border-radius: 0 0 1em 1em;
   top: 100%;
-  padding:0 1em;
+  padding: 0 1em;
   box-shadow: 0 3px 30px rgba(0, 0, 0, 0.4);
   animation: opacity 0.5s forwards linear ease-in;
 }
 @keyframes opacity {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
-  
 }
-nav .controller-menu li{
+nav .controller-menu li {
   list-style: none;
   margin: 1em;
 }
-nav .controller-menu li a{
+nav .controller-menu li a {
   color: var(--dark);
   font-size: 0.8em;
   font-weight: 500;
   display: flex;
   text-decoration: none;
   align-items: center;
-
 }
-nav .controller-menu li a .icon svg{
+nav .controller-menu li a .icon svg {
   font-size: 1em;
   margin-left: 0.5em;
   color: var(--danger);
