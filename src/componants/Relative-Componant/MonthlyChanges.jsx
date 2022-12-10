@@ -20,9 +20,16 @@ const MonthlyChanges = () => {
       <div className="down">
         <div className="comments">
           <div className="comment-info">
-            <h3>{Math.floor(Math.random() * 100)}</h3>
+            <h3>{Math.floor(Math.random() * 900)}</h3>
             <p>Total Comment</p>
-            <span className="percent">{Math.floor(Math.random() * 99)}</span>
+            <span className="percent">{Math.floor(Math.random() * 99)}%</span>
+          </div>
+        </div>
+        <div className="comments">
+          <div className="comment-info">
+            <h3>${Math.floor(Math.random() * 9900)}</h3>
+            <p>Income status</p>
+            <span className="percent">{Math.floor(Math.random() * 99)}%</span>
           </div>
         </div>
       </div>
