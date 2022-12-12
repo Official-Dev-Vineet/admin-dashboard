@@ -5,6 +5,7 @@ import Dashboard from './componants/DashBoard/Dashboard'
 import Navbar from './componants/Relative-Componant/Navbar'
 import SideBar from './componants/Sidebar/SideBar'
 import User from './componants/Customers/user/User'
+import Order from './componants/Orders/Order'
 const App = () => {
     return (
         <BrowserRouter>
@@ -17,6 +18,7 @@ const App = () => {
                     <Route path='/Customers' element={<Customer />} >
                         <Route path='/Customers/:user' element={<User />} />
                     </Route>
+                    <Route path='/Orders' element={<Order />} />
                     <Route path='/*' element={<div>404 page not found</div>} />
                 </Routes>
             </div>

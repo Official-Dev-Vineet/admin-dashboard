@@ -89,3 +89,121 @@ export const members = [
         contribution: Math.floor(Math.random() * 99 + 1).toFixed(2),
     }
 ]
+export const order = [
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Skew',
+        Address: 'Bayern,Germany',
+        date: '22-02-2022',
+        status: 'pending',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Fredrick',
+        Address: 'Stein,Germany',
+        date: '14-08-2022',
+        status: 'dispatch',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'jonathan',
+        Address: 'Bayern,Germany',
+        date: '16-08-2022',
+        status: 'pending',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Elli',
+        Address: 'Ir-Rabat,Malta',
+        date: '25-02-2022',
+        status: 'dispatch',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Newton',
+        Address: 'L-Imtarfa,Malta',
+        date: '29-04-2022',
+        status: 'dispatch',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Robert',
+        Address: 'Bayern,Germany',
+        date: '16-02-2022',
+        status: 'completed',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Jonathan',
+        Address: 'L-Imdina,Malta',
+        date: '19-03-2022',
+        status: 'completed',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Saliva',
+        Address: 'Bayern,Germany',
+        date: '19-07-2022',
+        status: 'dispatch',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Saliva',
+        Address: 'Bayern,Germany',
+        date: '16-02-2022',
+        status: 'pending',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Elli',
+        Address: 'Bayern,Germany',
+        date: '22-09-2022',
+        status: 'pending',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Newton',
+        Address: 'Bayern,Germany',
+        date: '09-03-2022',
+        status: 'completed',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Jonathan',
+        Address: 'Bayern,Germany',
+        date: '02-04-2022',
+        status: 'dispatch',
+    }, {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Fredrick',
+        Address: 'Bayern,Germany',
+        date: '12-02-2022',
+        status: 'completed',
+    },
+    {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Elli',
+        Address: 'Bayern,Germany',
+        date: '05-03-2022',
+        status: 'pending',
+    }, {
+        id: Math.floor(Math.random() * 2349),
+        name: 'jonathan',
+        Address: 'Bayern,Germany',
+        date: '13-09-2022',
+        status: 'dispatch',
+    }, {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Robert',
+        Address: 'Bayern,Germany',
+        date: '12-08-2022',
+        status: 'pending',
+    }, {
+        id: Math.floor(Math.random() * 2349),
+        name: 'Fredrick',
+        Address: 'München,Germany',
+        date: '29-06-2022',
+        status: 'completed',
+    }
+
+]

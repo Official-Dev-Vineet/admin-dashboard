@@ -79,19 +79,19 @@ const User = () => {
       <div className="social">
         <ul>
           <li>
-            <a href="#face">{<FacebookSharpIcon />}</a>
+            <a href={`#facebook/user=${user}`}>{<FacebookSharpIcon />}</a>
           </li>
           <li>
-            <a href="#face">{<TwitterIcon />}</a>
+            <a href={`#twitter/user=${user}`}>{<TwitterIcon />}</a>
           </li>
           <li>
-            <a href="#face">{<GitHubIcon />}</a>
+            <a href={`#github/user=${user}`}>{<GitHubIcon />}</a>
           </li>
           <li>
-            <a href="#face">{<PinterestIcon />}</a>
+            <a href={`#pinterest/user=${user}`}>{<PinterestIcon />}</a>
           </li>
           <li>
-            <a href="#face">{<InstagramIcon />}</a>
+            <a href={`#instagram/user=${user}`}>{<InstagramIcon />}</a>
           </li>
         </ul>
       </div>
