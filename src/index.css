@@ -3,11 +3,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: all 300ms ease;
+  transition: all 300ms ease, color 100ms ease;
   transform-origin: center;
   border: none;
   outline: none;
   backface-visibility: hidden;
+  text-decoration: none;
+  list-style: none;
 }
 :root {
   --bg-light: #eff5f7;
@@ -69,7 +71,20 @@ html {
 .success {
   color: var(--success);
 }
-a.active{
-  color:red;
-  font-size: 3rem;
+main {
+  padding: 2rem;
+  opacity: 0;
+  animation: opacity 1s linear alternate forwards;
+  animation-delay: 1s;
+}
+
+/* animations  */
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { image, user } from "../../Constants/constants";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import DashboardSharpIcon from "@mui/icons-material/DashboardSharp";
@@ -15,6 +15,14 @@ import AddSharpIcon from "@mui/icons-material/AddSharp";
 import LogoutSharpIcon from "@mui/icons-material/LogoutSharp";
 import { msg } from "../../Constants/constants";
 const SideBar = () => {
+  useEffect(() => {
+    let menubar = document.getElementById("menuBar");
+    menubar.onclick = () => changeSidebar();
+    function changeSidebar() {
+      document.querySelector("aside").classList.toggle("active");
+      document.querySelector(".dashboard").classList.toggle("active");
+    }
+  }, []);
   return (
     <aside className="">
       <div className="top">
@@ -33,69 +41,69 @@ const SideBar = () => {
         <div className="menu-links">
           <ul>
             <li>
-              <Link to="dashboard">
+              <NavLink to="dashboard">
                 <span className="icon">{<DashboardSharpIcon />}</span>
                 <span className="link">Dashboard</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/Customers">
+              <NavLink to="/Customers">
                 <span className="icon">{<PermIdentitySharpIcon />}</span>{" "}
                 <span className="link">Customers</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/Orders">
+              <NavLink to="/Orders">
                 <span className="icon">{<ReceiptLongSharpIcon />}</span>
                 <span className="link">Orders</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/Analytics">
+              <NavLink to="/Analytics">
                 <span className="icon">{<InsightsSharpIcon />}</span>
                 <span className="link">Analytics</span>
-              </Link>
+              </NavLink>
             </li>
             <li title={`you've ${msg} messages`}>
-              <Link to="/Messages">
+              <NavLink to="/Messages">
                 <span className="icon">{<MailOutlineSharpIcon />}</span>
                 <span className="link">Messages</span>{" "}
                 <span className="msg">{msg}</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/Products">
+              <NavLink to="/Products">
                 <span className="icon">{<InventorySharpIcon />}</span>
                 <span className="link">Products</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/Reports">
+              <NavLink to="/Reports">
                 <span className="icon">{<ReportGmailerrorredSharpIcon />}</span>
                 <span className="link">Reports</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/Settings">
+              <NavLink to="/Settings">
                 <span className="icon">{<SettingsSharpIcon />}</span>
                 <span className="link">Settings</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/Add-account">
+              <NavLink to="/Add-account">
                 <span className="icon">{<AddSharpIcon />}</span>
                 <span className="link">Add Account</span>
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
       </div>
       <div className="last">
         <div className="logout">
-          <Link to="/Logout">
+          <NavLink to="/Logout">
             <span className="link">Logout</span>
             <span className="icon">{<LogoutSharpIcon />}</span>
-          </Link>
+          </NavLink>
         </div>
       </div>
     </aside>

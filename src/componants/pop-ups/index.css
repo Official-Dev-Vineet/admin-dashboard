@@ -30,12 +30,7 @@ small {
   width: calc(100% - 60px);
   left: 60px;
 }
-main {
-  padding: 2rem;
-  opacity: 0;
-  animation: opacity 1s linear alternate forwards;
-  animation-delay: 1s;
-}
+
 .summary {
   display: grid;
   grid-template-columns: repeat(2, 260px) minmax(180px, 200px) 1fr;
@@ -150,14 +145,6 @@ main {
   flex-direction: column;
   padding-left: 0.5em;
   color: var(--light);
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 .news-toggler h2 {
   width: 100%;

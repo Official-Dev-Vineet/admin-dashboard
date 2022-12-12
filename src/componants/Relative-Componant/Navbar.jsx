@@ -36,16 +36,6 @@ const Navbar = () => {
       }
     }
   }
-  useEffect(() => {
-    let menubar = document.getElementById("menuBar");
-    menubar.onclick = () => changeSidebar();
-    function changeSidebar() {
-      document.getElementsByTagName("aside")[0].classList.toggle("active");
-      document
-        .getElementsByClassName("dashboard")[0]
-        .classList.toggle("active");
-    }
-  }, []);
   return (
     <>
       <nav>

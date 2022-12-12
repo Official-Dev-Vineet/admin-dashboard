@@ -37,7 +37,7 @@ export const members = [
         name: 'Skew',
         age: 23,
         post: 'sales executive',
-        country: 'en',
+        country: 'England',
         contribution: Math.floor(Math.random() * 99 + 1).toFixed(2)
     },
     {
@@ -45,7 +45,7 @@ export const members = [
         name: 'Robert',
         age: 23,
         post: 'sales executive',
-        country: 'jp',
+        country: 'Japan',
         contribution: Math.floor(Math.random() * 99 + 1).toFixed(2),
     },
     {
@@ -53,7 +53,7 @@ export const members = [
         name: 'jonathan',
         age: 23,
         post: 'sales executive',
-        country: 'cn',
+        country: 'China',
         contribution: Math.floor(Math.random() * 99 + 1).toFixed(2),
     },
     {
@@ -61,15 +61,15 @@ export const members = [
         name: 'Saliva',
         age: 23,
         post: 'sales executive',
-        country: 'en',
+        country: 'Germen',
         contribution: Math.floor(Math.random() * 99 + 1).toFixed(2),
     },
     {
         id: Math.floor(Math.random() * 9999),
         name: 'Newton',
         age: 23,
-        post: 'Hr',
-        country: 'usa',
+        post: 'Human resource',
+        country: 'USA',
         contribution: Math.floor(Math.random() * 99 + 1).toFixed(2),
     },
     {
@@ -77,7 +77,7 @@ export const members = [
         name: 'Fredrick',
         age: 23,
         post: 'digital marketing',
-        country: 'au',
+        country: 'Australia',
         contribution: Math.floor(Math.random() * 99 + 1).toFixed(2),
     },
     {
@@ -85,7 +85,7 @@ export const members = [
         name: 'Elli',
         age: 25,
         post: 'Graphics designer',
-        country: 'np',
+        country: 'Nepal',
         contribution: Math.floor(Math.random() * 99 + 1).toFixed(2),
     }
 ]
