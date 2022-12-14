@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import MainHeader from "../pop-ups/MainHeader";
 import "./Order.css";
 import { order } from "../../Constants/constants";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { useState } from "react";
-import { useMemo } from "react";
 
 const Order = () => {
   const [statusVal, setStatus] = useState("all");
@@ -20,18 +18,18 @@ const Order = () => {
         element.parentElement.style.display = "table-row";
       }
     });
-    classListAdd()
+    classListAdd();
   }, [statusVal]);
 
   function classListAdd() {
     const filter = document.querySelectorAll(".filter ul li");
     filter.forEach((ele) => {
-      ele.addEventListener("click", () => {
-        if(ele.classList.contains('active')){
-          ele.classList.remove('active')
-          ele.classList.add('active')
-        }
-      });
+      ele.onclick = (e) => {
+        document
+          .querySelector(".filter ul li.active")
+          .classList.remove("active");
+        e.currentTarget.classList.add("active");
+      };
     });
   }
   return (

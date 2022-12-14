@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react'
+import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Customer from './componants/Customers/Customer'
 import Dashboard from './componants/DashBoard/Dashboard'
@@ -6,6 +6,8 @@ import Navbar from './componants/Relative-Componant/Navbar'
 import SideBar from './componants/Sidebar/SideBar'
 import User from './componants/Customers/user/User'
 import Order from './componants/Orders/Order'
+import Analytics from './componants/Analytics/Analytics'
+import Message from './componants/Message/Message'
 const App = () => {
     return (
         <BrowserRouter>
@@ -19,6 +21,8 @@ const App = () => {
                         <Route path='/Customers/:user' element={<User />} />
                     </Route>
                     <Route path='/Orders' element={<Order />} />
+                    <Route path='/Analytics' element={<Analytics />} />
+                    <Route path='/Messages' element={<Message />} />
                     <Route path='/*' element={<div>404 page not found</div>} />
                 </Routes>
             </div>
