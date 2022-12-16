@@ -8,6 +8,7 @@ import User from './componants/Customers/user/User'
 import Order from './componants/Orders/Order'
 import Analytics from './componants/Analytics/Analytics'
 import Message from './componants/Message/Message'
+import Product from './componants/Products/Product'
 const App = () => {
     return (
         <BrowserRouter>
@@ -22,7 +23,12 @@ const App = () => {
                     </Route>
                     <Route path='/Orders' element={<Order />} />
                     <Route path='/Analytics' element={<Analytics />} />
-                    <Route path='/Messages' element={<Message />} />
+                    <Route path='/Messages' element={<Message />} >
+                        <Route path='/Messages/:user' element={<Message />} />
+                    </Route>
+                    <Route path='/Products' element={<Product />} >
+                        <Route path='/Products:item' element={<Product />} />
+                    </Route>
                     <Route path='/*' element={<div>404 page not found</div>} />
                 </Routes>
             </div>
