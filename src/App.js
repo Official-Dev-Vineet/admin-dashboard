@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Customer from './componants/Customers/Customer'
 import Dashboard from './componants/DashBoard/Dashboard'
@@ -9,7 +9,19 @@ import Order from './componants/Orders/Order'
 import Analytics from './componants/Analytics/Analytics'
 import Message from './componants/Message/Message'
 import Product from './componants/Products/Product'
+import Report from './componants/Reports/Report'
 const App = () => {
+    const [isShow, setIsShow] = useState(true);
+    useEffect(() => {
+        let menubar = document.getElementById("menuBar");
+        menubar.addEventListener('click', () => {
+            setIsShow((pre) => !pre)
+        })
+    }, []);
+    useEffect(() => {
+        isShow ? document.querySelector(".dashboard").classList.remove("active") : document.querySelector(".dashboard").classList.add("active")
+        isShow ? document.querySelector("aside").classList.remove("active") : document.querySelector("aside").classList.add("active")
+    }, [isShow])
     return (
         <BrowserRouter>
             <Navbar />
@@ -27,8 +39,9 @@ const App = () => {
                         <Route path='/Messages/:user' element={<Message />} />
                     </Route>
                     <Route path='/Products' element={<Product />} >
-                        <Route path='/Products:item' element={<Product />} />
+                        <Route path='/Products/:item' element={<Product />} />
                     </Route>
+                    <Route path='/Reports' element={<Report />} />
                     <Route path='/*' element={<div>404 page not found</div>} />
                 </Routes>
             </div>

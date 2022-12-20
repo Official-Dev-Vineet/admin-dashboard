@@ -15,14 +15,6 @@ import AddSharpIcon from "@mui/icons-material/AddSharp";
 import LogoutSharpIcon from "@mui/icons-material/LogoutSharp";
 import { msg } from "../../Constants/constants";
 const SideBar = () => {
-  useEffect(() => {
-    let menubar = document.getElementById("menuBar");
-    menubar.onclick = () => changeSidebar();
-    function changeSidebar() {
-      document.querySelector("aside").classList.toggle("active");
-      document.querySelector(".dashboard").classList.toggle("active");
-    }
-  }, []);
   return (
     <aside className="">
       <div className="top">

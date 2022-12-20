@@ -60,7 +60,7 @@ const Product = () => {
             <div className="image-container">
               {Products[0][item]["url"].map((image, index) => {
                 return (
-                  <img
+                  <img key={index}
                     src={image ? image : ""}
                     alt={`${item}-${index}`}
                     className="item-image"

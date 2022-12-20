@@ -45,9 +45,9 @@ table {
   position: relative;
   width: 100%;
 }
-table thead {
+table thead tr{
   position: sticky;
-  top: calc(1.6em + 0.5em);
+  top: calc(1.6em + 0.8em);
   z-index: 1;
   left: 0;
   background-color: var(--light);

@@ -11,7 +11,7 @@ const News = () => {
   function SearchNews() {
     FetchAPI(searchTerm).then((data) => {
       setNews(data.articles);
-      console.log(data.articles);
+      // console.log(data.articles);
     });
   }
   return (

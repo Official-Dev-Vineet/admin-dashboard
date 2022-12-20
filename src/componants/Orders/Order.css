@@ -43,7 +43,7 @@
   overflow: scroll;
   margin-top: 0.5em;
 }
-table thead {
+.order-details table thead tr{
   position: sticky;
   top: 0;
 }
@@ -51,6 +51,6 @@ table thead {
 .order-details tr th {
   padding: 0.3em;
 }
-table tbody tr td:last-child > svg {
+.order-details table tbody tr td:last-child > svg {
   cursor: pointer;
 }
