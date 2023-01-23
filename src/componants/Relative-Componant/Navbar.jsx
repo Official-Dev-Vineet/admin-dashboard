@@ -8,9 +8,14 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import LogoutIcon from "@mui/icons-material/Logout";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import DiscountIcon from "@mui/icons-material/Discount";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
   const [msgCount, setMsgCount] = useState(5);
+  const [isActive, setIsActive] = useState(false);
   let [isShow, setIsShow] = useState(false);
   function toggleFullScreen() {
     if (
@@ -64,12 +69,52 @@ const Navbar = () => {
             <span
               className="icon"
               title={`${msgCount} notification`}
-              onClick={() => setMsgCount(0)}
+              onClick={() => {
+                setIsActive((pre) => !pre);
+              }}
             >
               {<NotificationsNoneIcon />}
               <span className="msg-count">{msgCount}</span>
             </span>
           </div>
+          {isActive && (
+            <div className="notification-panel">
+              <ul>
+                <li
+                  onClick={() => {
+                    setIsActive((pre) => !pre);
+                  }}
+                >
+                  <span className="icon">{<EmojiEventsIcon />}</span>
+                  <span>Jonathan wins last week UI/UX Prize Pool</span>{" "}
+                </li>
+                <li onClick={() => setIsActive((pre) => !pre)}>
+                  <span className="icon">{<DiscountIcon />}</span>
+                  <span>heavy discount on hosting on google cloud</span>
+                </li>
+                <li onClick={() => setIsActive((pre) => !pre)}>
+                  <span className="icon">{<AccountCircleIcon />}</span>
+                  <span>
+                    <span style={{ color: "var(--warning)" }}>New</span> User
+                    Added
+                  </span>
+                </li>
+                <li onClick={() => setIsActive((pre) => !pre)}>
+                  <span className="icon">{<ShoppingCartIcon />}</span>
+                  <span style={{ color: "var(--warning)" }}>New</span> Order
+                  Received
+                </li>
+
+                <li onClick={() => setIsActive((pre) => !pre)}>
+                  <span className="icon">{<AdminPanelSettingsIcon />}</span>
+                  <span>
+                    <span style={{ color: "var(--warning)" }}>warning</span>{" "}
+                    Account Action Required
+                  </span>
+                </li>
+              </ul>
+            </div>
+          )}
           <div className="user-profile">
             <picture>
               <img src={image} alt={user} />

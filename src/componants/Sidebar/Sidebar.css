@@ -30,14 +30,14 @@ aside .top {
 aside.active .top {
   background-image: none;
   background-color: var(--dark);
-  height: 50px;
+  height: 100px;
 }
 aside .top picture {
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 0 0 3px var(--light);
+  box-shadow: 0 0 0 3px var(--dark);
 }
 aside.active .top picture {
   width: 2rem;
@@ -61,7 +61,6 @@ aside.active .link {
   display: none;
 }
 .middle {
-  height: calc(80vh - 100px);
   padding: 0.4em;
 }
 .middle .input-field {

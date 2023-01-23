@@ -78,8 +78,8 @@
   place-items: center;
 }
 .item-image {
-    animation: opacity 1s forwards;
   height: 100px;
   width: 100px;
+  background-blend-mode:overlay;
   object-fit: contain;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { image, user } from "../../Constants/constants";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
@@ -87,15 +87,13 @@ const SideBar = () => {
                 <span className="link">Add Account</span>
               </NavLink>
             </li>
+            <li className="logout">
+              <NavLink to="/Logout">
+                <span className="link">Logout</span>
+                <span className="icon">{<LogoutSharpIcon />}</span>
+              </NavLink>
+            </li>
           </ul>
-        </div>
-      </div>
-      <div className="last">
-        <div className="logout">
-          <NavLink to="/Logout">
-            <span className="link">Logout</span>
-            <span className="icon">{<LogoutSharpIcon />}</span>
-          </NavLink>
         </div>
       </div>
     </aside>

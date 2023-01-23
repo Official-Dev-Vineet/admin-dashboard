@@ -30,7 +30,17 @@ const News = () => {
         {news?.map((data, index) => {
           return (
             <li key={index}>
-              <a href={data?.url} target='_blank' className="news-info">
+              <a
+                href={"#"}
+                className="news-info"
+                onClick={() => {
+                  window.open(
+                    data?.url,
+                    "_blank",
+                    "top=50,height=500,width=500,left=400,resizable=no"
+                  );
+                }}
+              >
                 <img src={data?.urlToImage} alt={data?.author} />
                 <div className="news-text">
                   <h5 className="title">{data?.title}</h5>
