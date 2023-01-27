@@ -1,8 +1,5 @@
 .customer {
   animation: opacity 1s linear alternate forwards;
-  position: absolute;
-  top: 40px;
-  left: 14rem;
   width: calc(100% - 14rem);
 }
 .users {

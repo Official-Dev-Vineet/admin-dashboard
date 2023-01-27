@@ -117,7 +117,7 @@ const Dashboard = () => {
               {toggler ? "hide news" : "show news"}
             </h2>
             <div className="news-list">
-              {toggler ? <News /> : "hidden successfully "}
+              {toggler ? <News /> : <p style={{textAlign:"center"}}>hidden successfully</p>}
             </div>
           </div>
         </section>

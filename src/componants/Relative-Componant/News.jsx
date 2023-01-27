@@ -37,7 +37,7 @@ const News = () => {
                   window.open(
                     data?.url,
                     "_blank",
-                    "top=50,height=500,width=500,left=400,resizable=no"
+                    "top=50,height=500,width=500,left=400"
                   );
                 }}
               >

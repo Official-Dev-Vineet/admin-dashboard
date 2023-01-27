@@ -4,31 +4,45 @@
   padding: 1rem 2rem;
   background-color: var(--dark-primary);
   color: var(--light);
+  position: relative;
 }
 .header h2 {
   font-size: 1.4rem;
   font-weight: 400;
+  text-transform: capitalize;
 }
 .header p {
   font-size: 0.8em;
   opacity: 0.8;
+  text-transform: capitalize;
 }
 small {
   text-transform: capitalize;
 }
-
+.header button{
+position: absolute;
+right: 10%;
+bottom:10%;
+background-color: var(--primary);
+color: #fff;
+border-radius: 0.4em;
+padding: 0.2em;
+}
+.header button.forward{
+  rotate: 180deg;
+  right: 5%;
+}
 /* dashboard summary  */
 
 .dashboard {
   animation: opacity 1s linear alternate forwards;
-  position: absolute;
-  top: 40px;
-  left: 14rem;
   width: calc(100% - 14rem);
+  position: relative;
+  margin-left: 14rem;
 }
 .dashboard.active {
   width: calc(100% - 60px);
-  left: 60px;
+  margin-left: 60px;
 }
 
 .summary {
@@ -59,8 +73,9 @@ small {
   transition: all 300ms;
 }
 .box:hover{
-    color: var(--light);
-    background-color: var(--dark);
+  border-radius: 0.2em;
+    transform: scale(0.8);
+    box-shadow: 0 0 0 1px var(--primary);
 }
 .data-details h4 {
   text-align: center;
@@ -146,6 +161,10 @@ small {
   padding-left: 0.5em;
   color: var(--light);
 }
+.news-toggler{
+  position: relative;
+}
+
 .news-toggler h2 {
   width: 100%;
   text-transform: capitalize;
@@ -155,4 +174,10 @@ small {
   user-select: none;
   cursor: pointer;
   overflow: hidden;
+}
+.member{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 100%;
+  gap:2rem
 }

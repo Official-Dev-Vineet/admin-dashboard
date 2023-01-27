@@ -10,6 +10,7 @@
   backface-visibility: hidden;
   text-decoration: none;
   list-style: none;
+  user-select: none;
 }
 :root {
   --bg-light: #eff5f7;
@@ -45,6 +46,8 @@
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
+  max-width: 1800px;
+  margin: 0 auto;
   overflow: hidden;
   background-color: var(--bg-light);
 }
@@ -72,6 +75,7 @@ html {
   color: var(--success);
 }
 main {
+  max-width: calc(1800px - 100px);
   padding: 2rem;
   opacity: 0;
   animation: opacity 1s linear alternate forwards;

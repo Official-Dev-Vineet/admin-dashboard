@@ -1,10 +1,11 @@
-import React, { useState,useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Customer from './componants/Customers/Customer'
 import Dashboard from './componants/DashBoard/Dashboard'
 import Navbar from './componants/Relative-Componant/Navbar'
 import SideBar from './componants/Sidebar/SideBar'
 import User from './componants/Customers/user/User'
+import Card from './componants/Customers/user/Card'
 import Order from './componants/Orders/Order'
 import Analytics from './componants/Analytics/Analytics'
 import Message from './componants/Message/Message'
@@ -35,8 +36,11 @@ const App = () => {
                 <Route index path='/' element={<Dashboard />} />
                 <Route path='/dashboard' element={<Dashboard />} />
                 <Route path='/Customers' element={<Customer />} >
-                    <Route path='/Customers/:user' element={<User />} />
+                    <Route path='/Customers/:user' element={<User />}>
+                    </Route>
+
                 </Route>
+                <Route path='/Customers/:user/:data' element={<Card />} />
                 <Route path='/Orders' element={<Order />} />
                 <Route path='/Analytics' element={<Analytics />} />
                 <Route path='/Messages' element={<Message />} >
